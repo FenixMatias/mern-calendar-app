@@ -13,7 +13,7 @@ dbConnection();
 app.use(cors());
 
 //Directorio Público
-app.use(express.static(__dirname + "/public"));
+app.use(express.static('/public/index.html'));
 
 //Lectura y parseo del body
 app.use(express.json());
