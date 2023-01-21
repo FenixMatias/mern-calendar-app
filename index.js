@@ -28,7 +28,7 @@ app.use('/api/events', require('./routes/event'));
 // app.get('*', (req, res) => {
 //     res.send(__dirname + '/public/index.html');
 // });
-app.get('/*', function(req,res) {
+app.get('*', function(req,res) {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
