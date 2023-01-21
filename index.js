@@ -1,5 +1,5 @@
 const express = require('express');
-const { dbConnection } = require('../database/config');
+const { dbConnection } = require('./database/config');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -20,9 +20,9 @@ app.use(express.json());
 
 //Rutas
 //TODO: auth // crear, login, renew
-app.use('/api/auth', require('../routes/auth'));
+app.use('/api/auth', require('./routes/auth'));
 //TODO: CRUD: Eventos
-app.use('/api/events', require('../routes/event'));
+app.use('/api/events', require('./routes/event'));
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
