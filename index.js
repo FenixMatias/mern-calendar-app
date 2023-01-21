@@ -23,9 +23,8 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 //TODO: CRUD: Eventos
 app.use('/api/events', require('./routes/event'));
-app.get('/', (req, res) => {
-    // res.sendFile(__dirname + '/public/index.html');
-    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 
