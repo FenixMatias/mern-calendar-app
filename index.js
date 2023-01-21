@@ -24,7 +24,7 @@ app.use('/api/auth', require('./routes/auth'));
 //TODO: CRUD: Eventos
 app.use('/api/events', require('./routes/event'));
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(path.join(__dirname, '..','build', 'index.html'))
 });
 
 
